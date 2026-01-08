@@ -15,6 +15,7 @@ public class findElement {
 
         return arr[index] == target || find(arr, target, index+1);
     }
+    
     static int findIndex(int[] arr, int target, int index){
         if(index == arr.length){
             return -1;
