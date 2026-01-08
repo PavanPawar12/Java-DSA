@@ -18,4 +18,6 @@ public class CheckSorted {
         return arr[index] < arr[index + 1] && arrSorted(arr, index + 1);
     }
 
+    
+
 }
