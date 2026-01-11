@@ -1,6 +1,6 @@
 
-public class Fibo {
-    
+public class BasicQuestion{
+
     static int fibo(int n) {
         // base condition
         if (n < 2) {
@@ -107,6 +107,5 @@ public class Fibo {
         System.out.println(count(30204120));
 
     }
-
-
+    
 }
