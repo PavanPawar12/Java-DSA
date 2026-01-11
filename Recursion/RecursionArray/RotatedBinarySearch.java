@@ -1,9 +1,9 @@
-
-import javax.swing.text.DefaultStyledDocument;
-
 public class RotatedBinarySearch {
     public static void main(String[] args){
-
+        int arr[] = {4,5,6,7,0,1,2};
+        int target = 6;
+        int ans = search(arr, target, 0, arr.length - 1);
+        System.out.println(ans);
     }
     static int search(int[] arr, int target, int start, int end){
         if(start > end){
@@ -27,6 +27,7 @@ public class RotatedBinarySearch {
         }else{
            
         }
+        return -1;
 
     }
 }
