@@ -1,6 +1,8 @@
 public class NumberExampleRecursion {
     public static void main(String[] args) {
         print(1);
+        int ans = fibo(4);
+        System.out.println(ans);
     }
     static void print(int n){
         if (n == 5){
@@ -13,6 +15,16 @@ public class NumberExampleRecursion {
         // This is the last function call
         System.out.println(n);
         print(n + 1);
+    }
+
+    static int fibo(int n){
+        if(n < 2){
+            return n;
+        }
+
+        return fibo(n - 1) + fibo(n - 2);
+
+
     }
     
     
