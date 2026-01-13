@@ -24,7 +24,6 @@ public class DLLPractice {
 
         temp.next = node;
         node.prev = temp;
-        
     }
     
     public void insertAtPosition(int val, int index){
