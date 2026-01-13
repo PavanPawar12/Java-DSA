@@ -10,7 +10,6 @@ public class DLLPractice {
             head.prev = node;
         }
         head = node;
-
     }
 
     public void addLast(int val){

@@ -54,5 +54,7 @@ public class DLL {
         
         list.display();
         list.revdisplay();
+        
+
     }
 }
