@@ -36,5 +36,6 @@ public class LinkedList {
         list.addFirst(15);
         list.display();
 
+        
     }   
 }
