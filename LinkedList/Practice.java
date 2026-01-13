@@ -266,6 +266,7 @@ public class Practice{
             this.next = null;
         }
     }
+    
 
     public void addFirst(int data){
         Node newNode = new Node(data);
