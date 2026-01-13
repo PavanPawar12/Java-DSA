@@ -1,5 +1,3 @@
-
-
 public class DLLPractice {
     private Node head;
     public void insertFirst(int val){
