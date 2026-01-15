@@ -17,7 +17,7 @@ public class Triangle {
             for (int space = 1; space <= n - i; space++) {
                 System.out.print(" ");
             }
-
+            
             for (int j = 1; j <= i; j++) {
                 System.out.print(j +" ");
             }
