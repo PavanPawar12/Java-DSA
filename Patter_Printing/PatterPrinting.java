@@ -54,5 +54,5 @@ public class PatterPrinting {
             System.out.println();
         }
     }
-
+    
 }
