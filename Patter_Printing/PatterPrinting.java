@@ -5,6 +5,8 @@ public class PatterPrinting {
         // string();
         // patter2(5);
         patter3(5);
+        // pattern4(4);
+        pattern5(4);
     }
 
     static void triangle() {
@@ -21,7 +23,6 @@ public class PatterPrinting {
         }
     }
     
-
     static void patter1(int n){
         for (int i = 0; i < n; i++) {
             for(int j = 0; j < n; j++){
@@ -40,16 +41,48 @@ public class PatterPrinting {
             System.out.println();
         }
     }
+
+    
     static void patter3(int n){
-        for(int row = 0; row < 2* n; row++){
+        for(int row = 0; row < 2*n; row++){
             int totalColinrow = row > n ?  2*n - row :row;
             int noOfSpace = n - totalColinrow;
             for (int s = 0; s < noOfSpace; s++) {
                 System.out.print(" ");
             }
-            
+
             for (int col = 0; col < totalColinrow; col++) {
                 System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void pattern4(int n){
+        for(int row = 1; row <= n; row++){
+            
+            for(int s = 1; s < n - row; s++){
+                System.out.print(" ");
+            }
+
+            for (int col = n; col >= 1; col--) {
+                System.out.print(col);
+            }
+            
+            for (int col = 1; col <= row; col++) {
+                System.out.print(col);
+            }
+            System.out.println();
+        }
+    }
+
+    static void pattern5(int n){
+        for(int i = 0; i < n; i++){
+            for(int s = 1; s < n - i; s++){
+                System.out.print(" ");
+            }
+            for(int j = 0; j < n - i; j++){
+                System.out.println("* ");
             }
             System.out.println();
         }
