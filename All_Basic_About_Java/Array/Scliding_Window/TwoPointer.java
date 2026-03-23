@@ -23,7 +23,7 @@ public class TwoPointer {
         int right = arr.length - 1;
         while(left < right){
             int temp = arr[left];
-            arrp
+
         }
     }
 }

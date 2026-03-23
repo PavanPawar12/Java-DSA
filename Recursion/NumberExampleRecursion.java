@@ -1,8 +1,8 @@
 public class NumberExampleRecursion {
     public static void main(String[] args) {
         print(1);
-        int ans = fibo(4);
-        System.out.println(ans);
+        // int ans = fibo(4);
+        // System.out.println(ans);
     }
     static void print(int n){
         if (n == 5){

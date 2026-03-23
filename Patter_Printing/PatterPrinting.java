@@ -68,7 +68,6 @@ public class PatterPrinting {
             for (int col = n; col >= 1; col--) {
                 System.out.print(col);
             }
-            
             for (int col = 1; col <= row; col++) {
                 System.out.print(col);
             }

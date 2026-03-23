@@ -17,7 +17,7 @@ public class Scope {
         // ob.a = 23;
         // System.out.println(ob.name="jivan");
         // System.out.println(ob.a);
-       // int g;  // need to initialized
+       //  int g;  // need to initialized
         // System.out.println(g);
     }
 }

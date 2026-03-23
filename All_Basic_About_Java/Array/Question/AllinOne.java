@@ -27,7 +27,7 @@ public class AllinOne {
       
         // factorial(5);
 
-        AllinOne sol = new AllinOne();
+        // AllinOne sol = new AllinOne();
 
         // int[] nums = {1,2,3,4};
 
@@ -37,13 +37,29 @@ public class AllinOne {
         // for (int val : result) {
         //     System.out.print(val + " ");
         // }
-
+        
         // int[] nums = {1,2,3};
         // System.out.println(sol.subarraySum(nums, 3));
-       int[] nums = {2,3,2};
+    //    int[] nums = {2,3,2};
     //    System.out.println(sol.maxProduct(nums));
-       System.out.println(sol.mejorityElement(nums));
-    }
+    //    System.out.println(sol.mejorityElement(nums));
+    //    largetElement();
+
+        // System.out.println(secondLargest());  
+        // secondLargest2();  
+        // System.out.println(secondLargest3());
+
+
+        // int[] arr = {1, 2, 4, 7, 7, 5};
+        // int[] result = getSecondOrderElement(arr);
+          
+        // System.out.println("Second Largest: " + result[0]);
+        // System.out.println("Second Smallest: " + result[1]);
+
+        // System.out.println(isSortedArr());
+       rotateArray();
+
+    }   
 
     public static void sum() {
         int[] arr = { 1, 2, 3, 4, 5, 6 };
@@ -95,7 +111,7 @@ public class AllinOne {
         }
         return j + 1;
     }
-    public static void secondLargest() {
+    public static void secondLargest1() {
         int[] arr = { 1, 2, 3, 54, 4, 7 };
         if(arr.length < 2){
             System.out.println("Second smallest is not possible ");
@@ -196,8 +212,6 @@ public class AllinOne {
         }
         int missing = totalSum - arrsum;
         System.out.println("Mssing element: " + missing);
-
-    
     }
 
     public static boolean  containDuplicate(){
@@ -322,5 +336,110 @@ public class AllinOne {
         return -1;
     }
 
-    public int 
+    public static void largetElement(){
+        int[] arr = {12,23,34,24,54,10, 9};
+        int largest = arr[0];
+        
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] > largest ){
+                largest = arr[i];
+
+            }
+        }
+        System.out.println("The largest Element: " + largest);
+    }
+
+    public static int secondLargest (){
+        int[] arr = {1,2,4,7,7,5,12,9};
+        int n = arr.length;
+        Arrays.sort(arr);
+
+        int larget = arr[n - 1];
+        for(int  i = n-2; i >= 0; i--){
+            if(arr[i] != larget){
+                return arr[i];
+            }
+        }
+        return -1;
+    }
+
+    public static void secondLargest2(){
+        int[] arr = {1,2,4,7,7,5,12,9};
+
+        int largest = arr[0];
+        int secondLargest = -1;
+        for(int i = 0 ; i < arr.length; i++){
+            if(arr[i] > largest){
+                largest = arr[i];
+            }
+        }
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] < largest && arr[i] > secondLargest){
+                secondLargest = arr[i];
+            }
+        }
+
+        System.out.println("The secondLarget: " + secondLargest); 
+    }
+
+    public static int secondLargest3(int[] arr){
+        
+        int n = arr.length;
+        int largest = arr[0];
+        int secondLargest = -1;
+        for(int i = 0; i < n; i++){
+            if(arr[i] > largest){
+                secondLargest = largest;
+                largest = arr[i];
+            }else if(arr[i] < largest &&  arr[i] > secondLargest){
+                secondLargest = arr[i];
+            }
+        }
+        return secondLargest;    
+    }
+    public static int secondSmallest3(int[] arr){
+        
+        int n = arr.length;
+        int smallest = arr[0];
+        int secondSmallest = Integer.MAX_VALUE;
+        for(int i = 0; i < n; i++){
+            if(arr[i] > smallest){
+                secondSmallest = smallest;
+                smallest = arr[i];
+            }else if(arr[i] != smallest &&  arr[i] > secondSmallest){
+                secondSmallest = arr[i];
+            }
+        }
+        return secondSmallest;    
+    }
+
+    public static int[] getSecondOrderElement(int[] arr){
+        int secondLargest = secondLargest3(arr);
+        int secondSmallest = secondSmallest3(arr);
+        return new int[]{secondLargest, secondSmallest};
+    }
+
+    public static boolean  isSortedArr(){
+        int[] arr = {1,2,4,7,7,5,12,9};
+        for(int i = 1; i < arr.length; i++){
+            if(arr[i] < arr[i - 1]){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void rotateArray(){
+        int[] arr = {1,2,3,4,5};
+        int n = arr.length;
+        int temp = arr[0];
+        for (int i = 1; i < n; i++) {
+            arr[i - 1] = arr[i];
+        }
+        arr[n -1] = temp;
+        
+        for(int num: arr){
+            System.out.print(num + " ");
+        }
+    }
 }
