@@ -171,7 +171,6 @@ public class AllArrayQuestion {
         int[] arr = {1, 2, 2, 3, 1, 4, 2};
         int n = arr.length;
 
-
         for (int i = 0; i < n; i++) {
             
             boolean alreadyCounted = false;
