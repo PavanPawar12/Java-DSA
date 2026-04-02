@@ -1,20 +1,24 @@
+
+import java.util.HashSet;
+
 public class CountDuplicateElement{
     public static void main(String[] args) {
-       System.out.println(fibo(5));
+    //    System.out.println(fibo(5));
+    count();    
     }
-    public static void print1(int  n){
-        if(n == 5){
-            System.out.println(n);
-            return;
+
+    public static void count(){
+        int[] arr = {1,2,3,2,4,5,2,2,2,2};
+        
+        HashSet<Integer> set = new HashSet<>();
+        for(int num : arr){
+           if(!set.contains(num)){
+                System.out.println(num);
+           }
+           set.add(num);
+        
         }
-        System.out.println(n);
-        print1(n + 1);
-        System.out.println(n);
+        
     }
-    public static int fibo(int n){
-        if(n  < 2){
-            return n;
-        }
-        return fibo(n - 1) + fibo(n - 2);
-    }
+
 }
