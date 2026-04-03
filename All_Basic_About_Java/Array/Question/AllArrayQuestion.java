@@ -46,10 +46,12 @@ public class AllArrayQuestion {
         //     System.out.print(arr[i]  + " ");
         // }
 
-        int[] arr = {2,2,1,1,1,2,1,1,2};
+        // int[] arr = {2,2,1,1,1,2,1,1,2};
 
-        int result = majorityElement(arr);
-        System.out.println(result);
+        // int result = majorityElement(arr);
+        // System.out.println(result);
+
+        moveZeroToEnd();
     }
 
     public static int[] MinMax(int[] arr) {

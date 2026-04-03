@@ -10,7 +10,6 @@ class TreeNode{
         this.right = null;
     } 
 }
-
 public class BasicTree{
     public int count;
     BasicTree(){
@@ -46,3 +45,4 @@ public class BasicTree{
         // System.out.println(tree.right.val);
     }
 }
+
