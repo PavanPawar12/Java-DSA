@@ -17,10 +17,9 @@ public class AllinOne {
          * }
          */
 
-        // secondLargest();
+        System.out.println(secondLargest());
         // moveZero();
         // longestSum();
-
         // missingNo();
         // System.out.println(containDuplicate());
         // System.out.println(containII());
@@ -57,7 +56,7 @@ public class AllinOne {
         // System.out.println("Second Smallest: " + result[1]);
 
         // System.out.println(isSortedArr());
-       rotateArray();
+    //    rotateArray();
 
     }   
 
@@ -173,7 +172,6 @@ public class AllinOne {
         // for (int i = 0; i < arr.length; i++) {
         //     System.out.print(arr[i] + " ");
         // }
-
         int j = 0;
         for(int i = 0; i < arr.length; i++){
             if(arr[i] != 0){
@@ -183,6 +181,7 @@ public class AllinOne {
                 j++;
             }
         }
+        
         for(int i = 0; i < arr.length; i++){
             System.out.print(arr[i] + " ");
         }
@@ -355,7 +354,8 @@ public class AllinOne {
         Arrays.sort(arr);
 
         int larget = arr[n - 1];
-        for(int  i = n-2; i >= 0; i--){
+        for(int  i = n-2; i >= 0
+            ; i--){
             if(arr[i] != larget){
                 return arr[i];
             }
