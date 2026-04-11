@@ -1,4 +1,5 @@
 // -DSA is so easy, But it want's more time to practice: give your maximum time to solve and dry run the program and understand-------------------------------
+import java.util.Arrays;
 import java.util.HashSet;
 // import java.util.Arrays;
 public class AllArrayQuestion {
@@ -51,7 +52,13 @@ public class AllArrayQuestion {
         // int result = majorityElement(arr);
         // System.out.println(result);
 
-        moveZeroToEnd();
+        // moveZeroToEnd();
+
+        int[] arr = {-1,2,1,4};
+        int result = treeSumClosest(arr,1);
+        System.out.println(result);
+
+        
     }
 
     public static int[] MinMax(int[] arr) {
@@ -423,8 +430,34 @@ public class AllArrayQuestion {
                 high--;
             }
         }
-       
+    
+        // Problem: three sum closest
         
+    }
+    public static int treeSumClosest(int[] arr, int target){
+        int n = arr.length;
+        int closest = arr[0]+ arr[1] + arr[2];
+        Arrays.sort(arr);
+        
+        for(int i = 0; i < n - 2; i++){
+            int left = i + 1;
+            int right = n - 1;
+            while(left <= right){
+                int sum = arr[i] + arr[left] + arr[right];
+
+                if(Math.abs(sum - target) < Math.abs(closest - target)){
+                    closest = sum;
+                }
+                if(sum < target){
+                    left++;
+                }else if(sum > target){
+                    right--;
+                }else{
+                    return sum;
+                }
+            }
+        }
+        return closest;
     }
 
 }

@@ -17,7 +17,7 @@ public class AllinOne {
          * }
          */
 
-        System.out.println(secondLargest());
+        // System.out.println(secondLargest());
         // moveZero();
         // longestSum();
         // missingNo();
@@ -58,6 +58,14 @@ public class AllinOne {
         // System.out.println(isSortedArr());
     //    rotateArray();
 
+        // System.out.println(sortedSquares());
+        // AllinOne obj = new AllinOne();
+        int[] arr = {-4,-1,0,3,10};
+        int[] result = sortedSquares1(arr);
+        System.out.println(Arrays.toString(result));
+
+         
+        
     }   
 
     public static void sum() {
@@ -172,7 +180,7 @@ public class AllinOne {
         // for (int i = 0; i < arr.length; i++) {
         //     System.out.print(arr[i] + " ");
         // }
-        
+
         int j = 0;
         for(int i = 0; i < arr.length; i++){
             if(arr[i] != 0){
@@ -443,4 +451,37 @@ public class AllinOne {
             System.out.print(num + " ");
         }
     }
+
+    //Problem : Squares of Sorted Array
+    public static int[] sortedSquares(int[] arr){
+        int n = arr.length;
+        int[] newarr = new int[n];
+        for(int i = 0; i < n; i++){
+            newarr[i] = arr[i] * arr[i];
+        }
+        Arrays.sort(newarr);
+        return newarr;
+    }
+    // Optimual solution of above Problem statement
+    public static int[] sortedSquares1(int[] arr){
+        int n = arr.length;
+        int[] result = new int[n];
+        int left = 0, right = n - 1, pos = n - 1;
+
+        while(left <= right){
+            int leftsquare = arr[left] * arr[left];
+            int rightsquare = arr[right] * arr[right];
+
+            if(leftsquare > rightsquare){
+                result[pos] = leftsquare;
+                left++;
+            }else{
+                result[pos] = rightsquare;
+                right--;
+            }
+            pos--;
+        }
+        return result;
+    }
+
 }
